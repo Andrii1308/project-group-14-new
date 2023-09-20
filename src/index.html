@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Order stylish high quality watches online, quick and easy. Free delivery."/>
+    <link rel="icon" type="image/png" href="./img/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>The Watch Spot</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  </head>
+  <body data-body>
+    <!-- Navigation-->
+    <load scr="./partials/header.html" />
+    <!-- Hero-->
+    <load scr="./partials/hero.html" />
+    <!-- About us-->
+    <load scr="./partials/about-us.html" />
+    <!-- Catalog-->
+    <load scr="./partials/catalog.html" />
+    <!-- New watches-->
+    <load scr="./partials/new-watches.html" />
+    <!-- Sale-->
+    <load scr="./partials/sale.html" />
+    <!-- Modal-->
+    <load scr="./partials/modal.html" />
+    <!-- Footer-->
+    <load scr="./partials/footer.html" />
+
+    <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/menu.js"></script>
+    <script>
+      const swiper = new Swiper('.hero-swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+
+        // If we need pagination
+        pagination: {
+          el: '.slider-pagination',
+          // type: 'fraction',
+          type: 'custom',
+          renderCustom: function (swiper, current, total) {
+            return '0' + current + ' — ' + '0' + total;
+          },
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.slider-button-next',
+          prevEl: '.slider-button-prev',
+        },
+      });
+    </script>
+  </body>
+</html>
